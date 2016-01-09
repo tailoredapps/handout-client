@@ -1,0 +1,5 @@
+{
+  "server": "wss://handout.tailored-apps.com",
+  "check": false,
+  "keyfile": "~/.ssh/id_rsa"
+}
