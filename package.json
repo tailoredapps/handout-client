@@ -34,6 +34,7 @@
     "tailored.js": "git+ssh://phrepo@phabricator.tailored-apps.com/diffusion/TAILOREDJS/tailored-js.git#v0.1.0",
     "ursa": "^0.9.1",
     "ws": "^0.8.1",
+    "yargonaut": "^1.1.2",
     "yargs": "^3.31.0"
   }
 }

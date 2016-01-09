@@ -1,0 +1,1 @@
+# Dummy file to suppress node-config warning for machines that have set their NODE_ENV to "develop" (as is the case with many developer machines, unsurprisingly)
