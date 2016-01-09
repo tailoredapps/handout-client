@@ -15,7 +15,7 @@ After installing, see `handout --help` for a list of options and usage informati
 Handout will look in `~/.handoutrc` for default values. This file must be formatted .json style and can contain defaults for values such as `username`, `keyfile` etc.
 
 ## Example .handoutrc File
-```json
+```
 {
   "username": "myuser",
   "keyfile": "~/.ssh/some_id_rsa"
