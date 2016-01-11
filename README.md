@@ -2,7 +2,7 @@
 Install handout client as a global npm package. For this to work, your user must be registered with the tailored apps phabricator instance, and you must be granted access to the handout client repo. 
 
 ```
-npm i -g git+ssh://phrepo@phabricator.tailored-apps.com/diffusion/HANDOUT/handout.git
+npm i -g git+ssh://phrepo@phabricator.tailored-apps.com/diffusion/HANDOUTCLIENT/handout-client.git
 ```
 
 ## Global Installation
