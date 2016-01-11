@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://phrepo@phabricator.tailored-apps.com/diffusion/HANDOUT/handout.git"
+    "url": "git+ssh://phrepo@phabricator.tailored-apps.com/diffusion/HANDOUTCLIENT/handout-client.git"
   },
   "keywords": [
     "handout"
