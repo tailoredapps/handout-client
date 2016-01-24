@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 import co from 'co'
 
@@ -11,19 +11,18 @@ const pkg = require('../package.json')
 outputTitle(pkg)
 
 co(function *() {
-    const {server: url, username, ...cmd} = getOptions()
+  const {server: url, username, ...cmd} = getOptions()
 
-    const c = new WebsocketClient({
-        url,
-        username
-    })
+  const c = new WebsocketClient({
+    url,
+    username
+  })
 
-    output(`Attempting to connect to ${outputStyles.url(c.opts.url)}`)
+  output(`Attempting to connect to ${outputStyles.url(c.opts.url)}`)
 
-    yield c.connect()
+  yield c.connect()
 
-    output(`Connected to ${outputStyles.url(c.socket.url)}`, LEVEL_OK)
+  output(`Connected to ${outputStyles.url(c.socket.url)}`, LEVEL_OK)
 
-    yield c.sendCommand(cmd)
-
+  yield c.sendCommand(cmd)
 }).catch(err => output(err.message, LEVEL_ERROR))
