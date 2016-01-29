@@ -14,7 +14,8 @@ co(function *() {
   const {server: url, username, ...cmd} = getOptions()
 
   const c = new WebsocketClient({
-    url, username
+    url,
+    username
   })
 
   output(`Attempting to connect to ${outputStyles.url(c.opts.url)}`)
