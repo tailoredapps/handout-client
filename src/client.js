@@ -1,6 +1,6 @@
 'use strict'
 
-import output, {LEVEL_ERROR, LEVEL_OK, outputStyles, outputTitle} from 'output'
+import output, { LEVEL_DEBUG, LEVEL_ERROR, LEVEL_OK, outputStyles, outputTitle } from 'output'
 import getOptions from 'options'
 import WebsocketClient from 'WebsocketClient'
 
@@ -20,6 +20,10 @@ try {
   c.connect()
     .then(() => {
       output(`Connected to ${outputStyles.url(c.socket.url)}`, LEVEL_OK)
+
+      if (cmd.debug) {
+        output(`Command data: ${JSON.stringify(cmd)}`, LEVEL_DEBUG)
+      }
 
       c.sendCommand(cmd)
     })
