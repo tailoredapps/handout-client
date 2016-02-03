@@ -12,7 +12,7 @@ Since globally installing npm packages usually requires superuser permissions, a
 After installing, see `handout --help` for a list of options and usage information.
 
 # Configuration
-Handout will look in `~/.handoutrc` for default values. This file must be formatted .json style and can contain defaults for values such as `username`, `keyfile` etc.
+Handout will look in `~/.handoutrc` for default values. This file must be formatted .json style and can contain defaults for values such as `username`, `keyfile` etc. For a list of supported values see `defaults.json`.
 
 ## Example .handoutrc File
 ```
