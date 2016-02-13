@@ -9,25 +9,36 @@ const pkg = require('../package.json')
 try {
   outputTitle(pkg)
 
-  const {server: url, username, ...cmd} = getOptions()
+  const { server: url, username, ...cmd } = getOptions()
+
+  if (cmd.debug) {
+    output(`Command data: ${JSON.stringify(cmd)}`, LEVEL_DEBUG)
+  }
 
   const c = new WebsocketClient({
     url, username
   })
 
-  output(`Attempting to connect to ${outputStyles.url(c.opts.url)}`)
+  output(`Connecting to ${outputStyles.url(c.opts.url)}`)
 
   c.connect()
     .then(() => {
       output(`Connected to ${outputStyles.url(c.socket.url)}`, LEVEL_OK)
 
-      if (cmd.debug) {
-        output(`Command data: ${JSON.stringify(cmd)}`, LEVEL_DEBUG)
-      }
-
       c.sendCommand(cmd)
     })
-    .catch(err => output(err.message, LEVEL_ERROR))
+    .catch(err => {
+      output(err.message, LEVEL_ERROR)
+
+      if (cmd.debug) {
+        output(err.stack, LEVEL_DEBUG)
+      }
+    })
 } catch (e) { // catches missing command error for instance
+  // @todo Might want to remove this code duplication. Ain't exactly pretty.
   output(e.message, LEVEL_ERROR)
+
+  if (process.argv.includes('--debug')) {
+    output(e.stack, LEVEL_DEBUG)
+  }
 }
