@@ -1,6 +1,6 @@
 {
   "name": "handout-client",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "CLI client for the Handout deployment server",
   "main": "client.js",
   "bin": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://phrepo@phabricator.tailored-apps.com/diffusion/HANDOUTCLIENT/handout-client.git"
+    "url": "https://github.com/tailoredapps/handout-client.git"
   },
   "keywords": [
     "handout"
@@ -24,6 +24,7 @@
     "bluebird": "^3.1.1",
     "chalk": "^1.1.1",
     "expand-home-dir": "0.0.2",
+    "handout-constants": "^1.0.1",
     "strip-ansi": "^3.0.0",
     "ursa": "^0.9.1",
     "ws": "^0.8.1",
