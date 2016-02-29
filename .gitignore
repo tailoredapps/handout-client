@@ -1,0 +1,11 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+node_modules/
+!src/node_modules/
+!dist/node_modules/
+npm-debug.log
+.idea/
+.vagrant/
+deploytime
+config/local-*
