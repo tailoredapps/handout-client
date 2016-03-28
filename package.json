@@ -1,6 +1,6 @@
 {
   "name": "handout-client",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "CLI client for the Handout deployment server",
   "main": "client.js",
   "bin": {
@@ -23,7 +23,7 @@
     "babel-polyfill": "^6.3.14",
     "bluebird": "^3.1.1",
     "chalk": "^1.1.1",
-    "expand-home-dir": "0.0.2",
+    "expand-home-dir": "0.0.3",
     "handout-constants": "^1.0.5",
     "strip-ansi": "^3.0.0",
     "ursa": "^0.9.1",
