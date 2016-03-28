@@ -24,7 +24,7 @@
     "bluebird": "^3.1.1",
     "chalk": "^1.1.1",
     "expand-home-dir": "0.0.2",
-    "handout-constants": "^1.0.4",
+    "handout-constants": "^1.0.5",
     "strip-ansi": "^3.0.0",
     "ursa": "^0.9.1",
     "ws": "^0.8.1",
